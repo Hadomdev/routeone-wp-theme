@@ -1,0 +1,152 @@
+.testimonials {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    @include max-mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $gray-900;
+  }
+
+  &__info-rate {
+    font-family: $oswald;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__header-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include max-mobile {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__slider {
+    overflow-x: hidden;
+    height: 100%;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      min-height: 296px;
+    }
+  }
+
+  &__card {
+    flex-grow: 1;
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    // box-shadow: $shadow-xl;
+    backdrop-filter: blur(5px);
+    padding: 24px;
+  }
+
+  &__card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__card-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $gray-900;
+  }
+
+  &__card-info-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__card-info-content {
+    strong {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 4px;
+    }
+
+    span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+
+  &__card-social {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__card-rates {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-bottom: 12px;
+  }
+
+  &__card-rates-item {
+    width: 17px;
+    height: 16px;
+    background: url("../img/icons/star.svg") no-repeat center;
+  }
+
+  &__card-text {
+    color: $gray-500;
+  }
+
+  .ti-widget.ti-goog {
+    .ti-controls {
+      display: none;
+    }
+
+    .ti-col-4 {
+
+      .ti-reviews-container-wrapper {
+        margin: 0;
+        .ti-review-item {
+
+        }
+
+        .ti-inner {
+          border-radius: 12px !important;
+          border: 1px solid #fff !important;
+          background-color: hsla(0,0%,100%,.3) !important;
+          backdrop-filter: blur(5px) !important;
+          padding: 24px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.car-rental-page {
+  &.page-header {
+    margin-bottom: 20px;
+    & > p {
+      margin: 15px 0;
+    }
+  }
+}

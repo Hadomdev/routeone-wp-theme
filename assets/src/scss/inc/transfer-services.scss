@@ -1,0 +1,86 @@
+.transfer-services-header {
+  padding: 78px 0 64px 0;
+  background-color: $gray-100;
+  margin-top: -48px;
+
+  @include max-tablet {
+    padding: 78px 0 32px 0;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+    color: $gray-0;
+    z-index: 2;
+
+    &:before {
+      z-index: 1;
+    }
+  }
+
+  &__form-title {
+    color: $gray-0;
+    margin-bottom: 24px;
+  }
+}
+
+.transfer-details-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  @include max-tablet {
+    flex-direction: column;
+  }
+
+  &__img-box {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 384px;
+    height: 368px;
+
+    @include max-mobile {
+      max-width: 343px;
+      height: 368px;
+    }
+
+    &:before {
+      content: attr(data-from);
+      position: absolute;
+      top: 15%;
+      left: 4%;
+      background-color: $gray-100;
+      padding: 0 10px;
+
+      @include max-mobile {
+        top: 19%;
+        left: 2%;
+      }
+    }
+
+    &:after {
+      content: attr(data-to);
+      position: absolute;
+      bottom: 6%;
+      right: 4%;
+      background-color: $gray-100;
+      padding: 0 10px;
+
+      @include max-mobile {
+        bottom: 40px;
+        right: 6px;
+      }
+    }
+
+    @include max-mobile {
+      flex-shrink: unset;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

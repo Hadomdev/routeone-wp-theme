@@ -1,0 +1,37 @@
+//fonts
+$oswald: Oswald;
+$open-sans: OpenSans;
+
+// colors
+$primary-400: #084772;
+$primary-500: #043353;
+$primary-900: #021523;
+$gray-0: #FFF;
+$gray-020: rgba(4, 51, 83, 0.20);
+$gray-030: rgba(255, 255, 255, 0.30);
+$gray-070: rgba(255, 255, 255, 0.70);
+$gray-090: rgba(255, 255, 255, 0.90);
+$gray-100: #EBECF0;
+$gray-400: #808080;
+$gray-500: #484848;
+$gray-900: #000;
+$shadow-color: #101828;
+$dark: #090909;
+$white: #fff;
+
+//shadows
+$shadow-xs: 0 1px 2px 0 rgba($shadow-color, 0.05);
+$shadow-md: 0 2px 4px -2px rgba($shadow-color, 0.06), 0 4px 8px -2px rgba($shadow-color, 0.10);
+$shadow-lg: 0 4px 6px -2px rgba($shadow-color, 0.03), 0 12px 16px -4px rgba($shadow-color, 0.08);
+$shadow-xl: 0 8px 8px -4px rgba($shadow-color, 0.03), 0 20px 24px -4px rgba($shadow-color, 0.08);
+
+$shadow-blur: blur(5px);
+
+//sections gap
+$sections-gap-desk: 128px;
+$sections-gap-tab: 96px;
+$sections-gap-mob: 80px;
+
+//transition
+$transition-hover: all ease-out 300ms;
+$transition-slider: all ease-in-out 500ms;

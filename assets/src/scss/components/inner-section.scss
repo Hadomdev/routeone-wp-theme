@@ -1,0 +1,56 @@
+@import "../inc/vars";
+
+.inner-section {
+  color: $dark;
+
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font: 600 64px/80px $oswald;
+
+    @include max-mobile {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  h2 {
+    font: 500 40px/52px $oswald;
+    margin-top: 40px;
+
+    @include max-mobile {
+      font: 500 32px/40px $oswald;
+    }
+  }
+
+  h3 {
+    font: 500 32px/44px $oswald;
+    margin-top: 20px;
+
+    @include max-mobile {
+      font: 500 24px/44px $oswald;
+    }
+  }
+
+  p {
+    margin-top: 12px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding-left: 18px;
+  }
+
+  li {
+    margin-top: 12px;
+  }
+}

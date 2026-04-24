@@ -1,0 +1,18 @@
+.vip-services {
+  .description-section {
+    background-color: rgba(255, 255, 255, 0.90);
+  }
+
+  .description-section__article {
+    width: 60%;
+
+    @include max-tablet {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    color: $primary-500;
+    margin-bottom: 32px;
+  }
+}

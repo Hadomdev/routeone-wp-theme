@@ -1,0 +1,54 @@
+.contacts-cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px 24px;
+
+  @include max-tablet {
+    flex-direction: column;
+  }
+
+  @include max-mobile {
+    gap: 8px 0;
+  }
+}
+
+.contacts-card {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid $gray-0;
+  background-color: $gray-090;
+  box-shadow: $shadow-xl;
+  backdrop-filter: $shadow-blur;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 24px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-020;
+    }
+  }
+
+  &__title {
+    width: 130px;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__wrap {
+    flex-grow: 1;
+  }
+
+  &__text {
+    font-family: $oswald;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+    word-break: break-word;
+  }
+}

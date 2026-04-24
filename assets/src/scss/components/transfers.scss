@@ -1,0 +1,162 @@
+.transfers {
+  &__title {
+    width: 60%;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 24px 0 0;
+
+    @include max-tablet {
+      gap: 16px;
+    }
+
+    @include max-mobile {
+      gap: 8px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(33% - 16px);
+    padding: 24px;
+    border-radius: 12px;
+    background-color: $gray-030;
+    box-shadow: $shadow-lg;
+    backdrop-filter: $shadow-blur;
+    border: 1px solid $gray-030;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+
+    @include max-tablet {
+      width: calc(50% - 16px);
+    }
+
+    @include max-mobile {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $gray-0;
+    }
+
+    &-time-wrapper,
+    &-price-wrapper {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    &-time,
+    &-price {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &-time {
+      font-weight: 400;
+    }
+
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__more {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid $gray-0;
+
+    @include max-tablet {
+      width: 100%;
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    @include max-mobile {
+      flex-direction: column;
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      width: 100%;
+
+      @include max-tablet {
+        width: 50%;
+      }
+
+      @include max-mobile {
+        width: 100%;
+      }
+
+      &-desktop {
+        @include max-tablet {
+          display: none;
+        }
+      }
+
+      &-tablet {
+        display: none;
+
+        @include max-tablet {
+          display: block;
+        }
+      }
+    }
+
+    &-links {
+      display: flex;
+      justify-content: space-between;
+
+      @include max-tablet {
+        flex-direction: column;
+        justify-content: start;
+        gap: 16px;
+        width: 50%;
+      }
+
+      @include max-mobile {
+        flex-direction: row;
+        width: 100%;
+      }
+
+      .btn--small {
+        padding: 8px 0;
+        text-align: center;
+        width: calc(50% - 8px);
+
+        @include max-tablet {
+          width: 100%;
+        }
+
+        @include max-mobile {
+          width: calc(50% - 8px);
+        }
+      }
+    }
+  }
+
+  &__load-more {
+    display: block;
+    margin: 24px auto 0;
+  }
+}

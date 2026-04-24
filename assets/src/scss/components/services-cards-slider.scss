@@ -1,0 +1,31 @@
+.services-cards-slider {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include max-mobile {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__swiper {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .services-slider__card {
+    padding: 0;
+  }
+
+  .services__item {
+    width: 100%;
+  }
+}

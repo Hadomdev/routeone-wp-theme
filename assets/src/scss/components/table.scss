@@ -1,0 +1,54 @@
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 12px;
+
+  table {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    border-spacing: 0;
+
+    th,
+    td {
+      text-align: left;
+      border: solid $gray-0;
+      border-width: 1px 0 0 1px;
+      background-color: $gray-030;
+    }
+
+    th {
+      padding: 24px;
+      font: 400 18px/28px $oswald;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 26px 24px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    tr {
+
+      th,
+      td {
+        &:first-child {
+          border-left: 0;
+        }
+      }
+    }
+
+    thead {
+      tr {
+        &:first-child {
+          th {
+            border-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

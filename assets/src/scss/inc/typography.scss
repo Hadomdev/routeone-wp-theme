@@ -1,0 +1,140 @@
+//titles
+.h1,
+.h2,
+.h3,
+.title,
+.title24,
+.title20,
+.title18 {
+  text-transform: uppercase;
+}
+
+.title,
+h1 {
+  position: relative;
+  font: 600 64px/80px $oswald;
+  padding-top: 30px;
+
+  @include max-mobile {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  &.no-padding {
+    padding-top: 0;
+  }
+
+  &:before {
+    content: attr(data-shadow);
+    font: 700 100px/1 $oswald;
+    text-transform: uppercase;
+    color: rgba(4, 51, 83, 0.15);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    @include max-tablet {
+      font-size: 80px;
+    }
+
+    @include max-mobile {
+      font-size: 60px;
+    }
+  }
+
+  &__light {
+    color: $gray-0;
+  }
+
+  &--02 {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 500;
+    margin-bottom: 24px;
+
+    @include max-tablet {
+      margin-bottom: 16px;
+    }
+
+    @include max-mobile {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--03 {
+    color: $gray-0;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 500;
+
+    @include max-mobile {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &--04 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: $gray-900;
+  }
+
+  &--common {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.title-24 {
+  font: 500 24px/32px $oswald;
+}
+
+.title-20 {
+  font: 500 20px/28px $oswald;
+}
+
+.title-18 {
+  font: 400 18px/28px $oswald;
+}
+
+//texts
+.text-18 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.text-16 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text-14 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text-12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-reg {
+  font-weight: 400;
+}
+
+.text-md {
+  font-weight: 500;
+}
+
+.text-sb {
+  font-weight: 600;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}

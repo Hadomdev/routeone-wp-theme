@@ -1,0 +1,93 @@
+.trip {
+  &__holder {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include max-mobile {
+      flex-direction: column;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 760px);
+      padding-top: 18.58%;
+      background: url(../img/icons/trip.svg) no-repeat 50% 50% / contain;
+
+      @include max-tablet {
+        width: calc(100% - 446px);
+      }
+      @include max-mobile {
+        width: 170px;
+        height: 86px;
+        top: 105px;
+        right: auto;
+        left: 212px;
+        transform: rotate(46deg) translate(0, 0);
+      }
+    }
+  }
+
+  &__item {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+      border-radius: 12px;
+    }
+
+    @include max-tablet {
+      width: 212px;
+    }
+    @include max-mobile {
+      align-self: flex-start;
+    }
+
+    &:last-child {
+      margin-top: 40px;
+
+      @include max-tablet {
+        margin-top: 14px;
+      }
+      @include max-mobile {
+        align-self: flex-end;
+        margin-top: 80px;
+      }
+    }
+  }
+
+  &__item-img {
+    display: flex;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+
+    @include max-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &_desktop {
+
+    @include max-mobile {
+      display: none;
+    }
+  }
+
+  &_mobile {
+    display: none;
+
+    @include max-mobile {
+      display: block;
+    }
+  }
+}

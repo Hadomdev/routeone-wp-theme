@@ -1,0 +1,33 @@
+{
+  "name": "routeone-wp-theme",
+  "version": "1.0.0",
+  "description": "RouteOne WordPress theme — root tooling (linters and translation helpers). The Webpack/Sass build lives in ./assets — see assets/README.md.",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme",
+    "ACF",
+    "Gutenberg"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^19.2.2",
+    "rtlcss": "^3.5.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:js": "wp-scripts lint-js 'js/*.js'"
+  }
+}

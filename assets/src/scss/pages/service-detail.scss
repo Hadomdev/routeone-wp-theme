@@ -1,0 +1,51 @@
+.service-detail {
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &__hero {
+    background-color: $gray-100;
+    color: $gray-0;
+    padding: 48px 0 80px;
+    margin: -48px 0 40px;
+
+    @include max-mobile {
+      padding: 44px 0 96px;
+    }
+  }
+
+  &__hero-article {
+    width: 600px;
+
+    @include max-mobile {
+      width: 100%;
+    }
+  }
+
+  &__hero-title {
+    margin-bottom: 20px;
+  }
+
+  &__hero-text {
+    margin-top: 20px;
+  }
+
+  &__main {
+
+    .benefits-section,
+    .services-description,
+    .testimonials__section,
+    .services-slider {
+      .title--02 {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.about-us-info {
+  .mb-128 {
+    margin-bottom: 0;
+  }
+
+  .services-description {
+    margin-bottom: 24px;
+
+    @include max-tablet {
+      margin-bottom: 16px;
+    }
+
+    @include max-mobile {
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -1,0 +1,192 @@
+//buttons
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-align: center;
+  font: 14px/24px $open-sans;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: $transition-hover;
+  background-color: $primary-500;
+  color: $gray-0;
+
+  &:hover {
+    background-color: $primary-400;
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(8, 71, 114, 0.20);
+    text-decoration: none;
+  }
+
+  svg {
+    fill: $gray-900;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $gray-0;
+    }
+  }
+
+  &--disabled {
+    background-color: $gray-400;
+    pointer-events: none;
+
+    svg {
+      fill: $gray-400;
+    }
+  }
+
+  &--secondary {
+    background-color: $gray-0;
+    color: $primary-500;
+
+    &:hover {
+      background-color: $primary-400;
+      color: $gray-0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(8, 71, 114, 0.20);
+      background-color: $primary-400;
+      color: $gray-0;
+    }
+
+    &.disabled {
+      background-color: $gray-400;
+      color: $gray-0;
+      pointer-events: none;
+    }
+  }
+
+  &--secondary-stroke {
+    background-color: transparent;
+    color: $primary-500;
+    border: 1px solid $primary-500;
+
+    &:hover {
+      background-color: $primary-400;
+      color: $gray-0;
+      border-color: $primary-400;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(8, 71, 114, 0.20);
+      background-color: $primary-400;
+      color: $gray-0;
+      border-color: transparent;
+    }
+
+    &.disabled {
+      background-color: transparent;
+      color: $gray-400;
+      border: 1px solid $gray-400;
+      pointer-events: none;
+    }
+  }
+
+  &--tetriary {
+    background-color: transparent;
+    color: $primary-900;
+
+    &:hover {
+      background-color: $primary-400;
+      color: $gray-0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(8, 71, 114, 0.20);
+      background-color: $primary-400;
+      color: $gray-0;
+    }
+
+    &.disabled {
+      background-color: transparent;
+      color: $gray-400;
+      border: 1px solid $gray-400;
+      pointer-events: none;
+    }
+  }
+
+  &--small {
+    padding: 8px 20px;
+  }
+
+  &__show-more {
+    display: block;
+    margin: 24px auto 0;
+  }
+}
+
+//link
+.link {
+  font: 14px/24px $open-sans;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: $transition-hover;
+  color: $primary-500;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $primary-500;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-400;
+    border-bottom: 1px solid $primary-400;
+  }
+
+  &:focus {
+    color: $primary-400;
+    border-bottom: 2px solid $primary-400;
+  }
+
+  &--disabled {
+    color: $gray-400;
+    border-bottom: 1px solid $gray-400;
+    pointer-events: none;
+  }
+}
+
+//Swiper button
+.swiper-actions {
+  position: relative;
+  z-index: 2;
+
+  &__button {
+    display: block;
+    position: relative;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    box-shadow: 0 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      font-size: 0;
+      background: url("../img/icons/arrow-left.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  &__next {
+    &:after {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}

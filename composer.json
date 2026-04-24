@@ -1,0 +1,26 @@
+{
+    "name": "hadomdev/routeone-wp-theme",
+    "type": "wordpress-theme",
+    "description": "RouteOne — WordPress theme demo for a transfers/car-rental brand. Built on the Underscores (_s) starter with ACF Pro Gutenberg blocks, AJAX, and a Webpack/Sass front-end pipeline.",
+    "keywords": [
+        "WordPress",
+        "Theme",
+        "ACF",
+        "Gutenberg"
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "wptrt/wpthemereview": "^0.2.1",
+        "php-parallel-lint/php-parallel-lint": "^1.2.0",
+        "wp-cli/i18n-command": "^2.2.5"
+    },
+    "scripts": {
+        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
+        "make-pot": "wp i18n make-pot . languages/routeone.pot"
+    }
+}

@@ -1,0 +1,25 @@
+.contact-us-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //height: 100vh;
+  background-color: $gray-100;
+  padding-top: 48px;
+  margin-top: -48px;
+  padding-bottom: 128px;
+
+  @include max-tablet {
+    height: auto;
+  }
+
+  .title {
+    &:before {
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    color: $gray-0;
+    margin-bottom: 32px;
+  }
+}

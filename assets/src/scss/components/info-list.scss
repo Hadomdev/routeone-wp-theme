@@ -1,0 +1,42 @@
+.info-list-wrapper {
+  margin-top: 24px;
+}
+
+.info-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  grid-gap: 24px;
+
+  @include max-tablet {
+    grid-gap: 14px;
+  }
+
+  @include max-mobile {
+    grid-gap: 8px;
+  }
+
+  &__card {
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    box-shadow: $shadow-lg;
+    backdrop-filter: $shadow-blur;
+    padding: 24px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    padding-left: 20px;
+
+    li {
+      color: $gray-500;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

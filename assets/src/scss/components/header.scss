@@ -1,0 +1,128 @@
+.admin-bar .header {
+  top: 32px;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: $gray-100;
+  padding: 2px 0;
+
+  &__logo {
+    display: flex;
+  }
+
+  &__holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.with-shadow {
+    box-shadow: $shadow-lg;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @include max-tablet {
+      gap: 40px;
+    }
+
+    @include max-mobile {
+      gap: 24px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 36px;
+
+      @include max-tablet {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        background-color: $gray-100;
+        padding: 24px 32px;
+      }
+
+      @include max-mobile {
+        padding: 24px 16px;
+      }
+
+      a {
+        transition: $transition-hover;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__nav-opener {
+    display: none;
+
+    @include max-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      background: transparent;
+      border: none;
+      width: 32px;
+      height: 32px;
+    }
+
+    &-line,
+    &:before,
+    &:after {
+      width: 24px;
+      height: 4px;
+      background-color: $gray-900;
+      border-radius: 1px;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+    }
+
+    &.open {
+
+      .header__nav-opener-line {
+        display: none;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        transform-origin: 12px 0px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        transform-origin: 1px 0px;
+      }
+    }
+  }
+}

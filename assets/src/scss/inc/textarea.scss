@@ -1,0 +1,52 @@
+//textarea
+.textarea {
+  outline: none;
+  resize: none;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.50);
+  padding: 12px;
+  transition: $transition-hover;
+
+  color: $gray-400;
+  font: 16px/26px $open-sans;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $gray-400;
+    font: 16px/26px $open-sans;
+    font-weight: 500;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.70);
+    box-shadow: $shadow-xs;
+  }
+
+  &:focus {
+    border: 2px solid $gray-400;
+    background-color: $gray-0;
+    color: $gray-900;
+
+    &::placeholder {
+      color: $gray-900;
+    }
+  }
+
+  &--error {
+    border: 2px solid #F04438;
+
+    &::placeholder {
+      color: $gray-900;
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    border: 1px solid #E0E0E0;
+    background: linear-gradient(0deg, #F9FAFB 0%, #F9FAFB 100%), #FFF;
+  }
+}

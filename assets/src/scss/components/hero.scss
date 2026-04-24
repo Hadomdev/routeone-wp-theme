@@ -1,0 +1,115 @@
+.hero {
+  &__title {
+    text-align: center;
+    margin-bottom: 56px;
+
+    &:before {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__carousel.swiper {
+    padding: 90px 0;
+    overflow: visible;
+    margin: 0 6%;
+  }
+
+  &__carousel-item {
+    width: 100%;
+    display: flex;
+
+    img {
+      transform: scale(1.8);
+      max-width: 380px;
+      width: 100%;
+      height: auto;
+      transition: all 0.25s ease-in-out 0s;
+    }
+  }
+
+  &__nav-btn {
+    &.swiper-button-lock {
+      display: block;
+    }
+  }
+
+  .swiper-slide-active {
+    img {
+      transform: scale(2.2, 2.2) translateY(-8%);
+    }
+  }
+
+  &__holder {
+    display: flex;
+    gap: 24px;
+
+    @include max-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 384px;
+
+    @include max-tablet {
+      max-width: unset;
+    }
+  }
+
+  &__description-text {
+    max-height: 160px;
+    padding-right: 10px;
+    overflow: auto;
+  }
+
+  &__description-holder {
+    flex-grow: 1;
+  }
+
+  &__description-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &:not(.active) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: max-content;
+  }
+
+  &__form {
+    flex: 1;
+  }
+
+  &__min-title {
+    text-transform: unset;
+    margin-bottom: 24px;
+  }
+
+  &__description-content {
+    flex-grow: 1;
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    box-shadow: $shadow-xl;
+    backdrop-filter: $shadow-blur;
+    padding: 24px;
+  }
+
+  &__options {
+    margin-bottom: 24px;
+  }
+}

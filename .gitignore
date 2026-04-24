@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+dist/
+*.bundle.js
+*.bundle.css
+*.css.map
+*.js.map
+
+# Editor / OS
+.idea/
+.vscode/
+.history/
+.DS_Store
+Thumbs.db
+
+# Local config
+.env
+.env.local
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Tooling
+.phpunit.result.cache
+.phpcs-cache

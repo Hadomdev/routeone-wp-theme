@@ -1,0 +1,63 @@
+.form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  transform: translate(-50%, -50%);
+  display: none;
+
+  &__wrapper {
+    position: relative;
+    border-radius: 12px;
+    background-color: $white;
+    box-shadow: 0px 10px 10px 0px rgba(31, 41, 55, 0.04), 0px 20px 25px 0px rgba(31, 41, 55, 0.10);
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-hover;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include max-mobile {
+      width: 343px;
+    }
+  }
+
+  &__close-btn {
+    cursor: pointer;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    color: $primary-500;
+    font-family: $oswald;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    color: $gray-500;
+  }
+}
+
+.wpcf7-response-output {
+  display: none;
+}

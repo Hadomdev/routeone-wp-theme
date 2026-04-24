@@ -1,0 +1,21 @@
+.article {
+  &__holder {
+    background: $white;
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  &__heading {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: $dark;
+  }
+}
+
+.article-not-bg {
+  .article__holder {
+    background-color: unset;
+  }
+}

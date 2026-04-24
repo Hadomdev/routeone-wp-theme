@@ -1,0 +1,71 @@
+.admin-bar .page-nav.sticky .page-nav__list {
+  top: 95px !important;
+}
+
+.page-nav {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 48px;
+  z-index: 11;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 20px 0;
+    overflow: auto;
+
+    @include max-tablet {
+      justify-content: flex-start;
+      padding: 20px 32px;
+    }
+
+    @include max-mobile {
+      padding: 20px 16px;
+    }
+  }
+
+  &.sticky {
+    .page-nav {
+      &__list {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background: $gray-100;
+        box-shadow: $shadow-lg;
+      }
+    }
+  }
+
+  &.static {
+    position: static;
+  }
+
+  &__link {
+    color: $primary-500;
+    padding: 4px 0;
+    position: relative;
+    white-space: nowrap;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background: $primary-500;
+      transition: transform 0.2s linear 0s;
+    }
+
+    &:hover {
+      &:before {
+        transform: translateX(-50%) scale(0, 1);
+      }
+    }
+  }
+}

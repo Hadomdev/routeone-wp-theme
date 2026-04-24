@@ -1,0 +1,91 @@
+.services-slider {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max-mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__header-content {
+    width: 100%;
+  }
+
+  &__title-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &__header-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include max-mobile {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__swiper {
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  &__card {
+    flex-grow: 1;
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    backdrop-filter: blur(5px);
+    padding: 24px;
+    display: block;
+  }
+
+  &__img-box {
+    width: 100%;
+    max-width: 336px;
+    height: 160px;
+    margin-bottom: 24px;
+
+    @include max-mobile {
+      margin: 0 auto 24px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__title,
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__title,
+  &__description {
+    font-family: $oswald;
+  }
+
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+}

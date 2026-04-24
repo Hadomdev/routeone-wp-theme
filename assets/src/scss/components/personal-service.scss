@@ -1,0 +1,75 @@
+.personal-service {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include max-tablet {
+      gap: 16px;
+    }
+
+    @include max-mobile {
+      gap: 8px;
+    }
+  }
+
+  &__card {
+    width: calc(33.3% - 16px);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 12px;
+    background: $gray-030;
+    box-shadow: $shadow-lg;
+    backdrop-filter: $shadow-blur;
+
+    @include max-tablet {
+      width: calc(50% - 8px);
+    }
+
+    @include max-mobile {
+      width: 100%;
+    }
+
+    &-number {
+      width: 26px;
+      background: #043353;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__card-image {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__card-text {
+    color: $gray-500;
+  }
+
+  &__card-info {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  &__text,
+  &__additional-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__additional-text {
+    margin-top: 24px;
+  }
+}

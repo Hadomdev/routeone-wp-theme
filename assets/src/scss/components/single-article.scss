@@ -1,0 +1,231 @@
+.single-article {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+
+    @include max-tablet {
+      gap: 40px;
+    }
+
+    @include max-mobile {
+      gap: 20px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    gap: 16px;
+
+    @include max-tablet {
+      width: calc(100% - 160px);
+    }
+
+    @include max-mobile {
+      width: 100%;
+    }
+  }
+
+  &__author-avatar {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $gray-500;
+  }
+
+  &__author-name {
+    font-weight: 500;
+  }
+
+  &__info-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__info-item:not(:last-child) {
+    position: relative;
+    padding-right: 7px;
+    margin-right: 7px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 1px;
+      background-color: $gray-500;
+      height: 14px;
+    }
+  }
+
+  &__info-parameter,
+  &__info-value {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__info-parameter {
+    font-weight: 600;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+
+    &-link {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      transition: $transition-hover;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0px 0px 0px 2px rgba(8, 71, 114, 0.50);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include max-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__main {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    a {
+      color: $primary-500;
+    }
+
+    @include max-tablet {
+      width: 100%;
+    }
+  }
+
+  &__article-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__article {
+    .title {
+      margin-bottom: 12px;
+      color: $gray-900;
+    }
+  }
+
+  &__article-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__article-image {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+  }
+
+  &__anchor {
+    position: absolute;
+    left: 0;
+    top: -75px;
+  }
+
+  &__nav {
+    position: sticky;
+    top: 75px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 32%;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    box-shadow: $shadow-lg;
+    backdrop-filter: $shadow-blur;
+
+    @include max-tablet {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  &__nav-title {
+    text-transform: uppercase;
+  }
+
+  &__nav-link {
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .faq {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  &__about-author {
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid $gray-0;
+    background-color: $gray-030;
+    box-shadow: $shadow-lg;
+    backdrop-filter: $shadow-blur;
+    display: flex;
+    gap: 24px;
+
+    @include max-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__author-article {
+    width: calc(100% - 144px);
+
+    @include max-mobile {
+      width: 100%;
+    }
+
+    .title {
+      color: $gray-900;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__author-avatar-big {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+  }
+}

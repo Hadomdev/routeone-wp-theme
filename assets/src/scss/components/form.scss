@@ -1,0 +1,113 @@
+.form {
+  border-radius: 12px;
+  border: 1px solid $gray-0;
+  background-color: $gray-030;
+  box-shadow: $shadow-xl;
+  backdrop-filter: $shadow-blur;
+  padding: 24px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @include max-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__field-container {
+    width: 50%;
+
+    @include max-mobile {
+      width: 100%;
+    }
+  }
+
+  &__field {
+    width: 100%;
+  }
+
+  &__textarea-field {
+    margin-bottom: 24px;
+  }
+
+  &__textarea {
+    min-height: 128px;
+  }
+
+  &__with-image {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+
+    @include max-tablet {
+      flex-direction: column-reverse;
+    }
+
+    .form__image {
+      display: flex;
+      width: 32%;
+      position: relative;
+      align-items: flex-end;
+
+      @include max-tablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      &_transfer {
+
+        img {
+          width: 330px;
+          height: 270px;
+        }
+      }
+
+      &_text {
+        text-align: center;
+        position: absolute;
+
+        &-from {
+          left: 35px;
+          top: 40px;
+        }
+
+        &-to {
+          right: 0;
+          bottom: 0;
+        }
+
+        img {
+          width: 16px;
+          height: 21px;
+        }
+      }
+    }
+  }
+
+  &__with-image-reverse {
+    flex-direction: row-reverse;
+
+    @include max-tablet {
+      flex-direction: column-reverse;
+    }
+
+    .form__image {
+      @include max-tablet {
+        width: 384px;
+        height: 368px;
+      }
+
+      @include max-mobile {
+        width: 100%;
+      }
+    }
+  }
+}

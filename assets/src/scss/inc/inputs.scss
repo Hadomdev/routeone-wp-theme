@@ -1,0 +1,63 @@
+//inputs
+.input {
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.50);
+  padding: 11px 12px;
+  transition: $transition-hover;
+  color: $gray-400;
+  font: 16px/26px $open-sans;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $gray-400;
+    font: 16px/26px $open-sans;
+    font-weight: 500;
+  }
+
+  &:focus {
+    border: 2px solid $gray-400;
+    background-color: $gray-0;
+  }
+
+  &--secondary {
+    border: 1px solid #E0E0E0;
+    background-color: $gray-0;
+    padding: 12px;
+    line-height: 24px;
+    font-weight: 400;
+
+    &::placeholder {
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    &:hover {
+      border-width: 2px;
+    }
+
+    &:focus {
+      color: $gray-900;
+      border: 2px solid $gray-900;
+
+      &::placeholder {
+        color: $gray-900;
+      }
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    border: 1px solid #E0E0E0;
+    background: linear-gradient(0deg, #F9FAFB 0%, #F9FAFB 100%), #FFF;
+  }
+}
+
+input.wpcf7-not-valid {
+  border: 2px solid #F04438;
+
+  &::placeholder {
+    color: $gray-900;
+  }
+}

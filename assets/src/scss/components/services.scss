@@ -1,0 +1,233 @@
+.services {
+  position: relative;
+
+  &__anchor {
+    position: absolute;
+    top: -166px;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include max-tablet {
+      gap: 16px;
+    }
+
+    @include max-mobile {
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    width: calc(33.3% - 16px);
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background-color: $gray-030;
+    box-shadow: $shadow-xl;
+    backdrop-filter: $shadow-blur;
+    transform: translate3d(0, 0, 0);
+    font: 400 16px/26px $open-sans;
+    overflow: hidden;
+    height: 256px;
+
+    &--blue,
+    &--white {
+      padding: 24px;
+    }
+
+    @include max-tablet {
+      width: calc(50% - 8px);
+    }
+
+    @include max-mobile {
+      width: 100%;
+    }
+
+    &-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 24px;
+      position: relative;
+
+      .link {
+        position: absolute;
+        bottom: 10px;
+      }
+    }
+
+    &-text {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 0px;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font: 500 20px/28px $oswald;
+      color: $gray-0;
+    }
+
+    &--horizontal,
+    &--white {
+      border: 1px solid $gray-0;
+    }
+
+    &--horizontal {
+      padding: 24px 0;
+
+      .services__item-text {
+        width: 50%;
+        margin-left: auto;
+      }
+
+      .services__item-img {
+        width: 45%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--white {
+      .services__item-text {
+        height: 136px;
+      }
+
+      .btn {
+        margin-top: 24px;
+
+        @include max-mobile {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    &--blue {
+      background-color: $primary-500;
+      color: $gray-0;
+    }
+
+    &:not(&--horizontal):not(&--blue):not(&--white) {
+      transition: $transition-hover;
+
+      .services__item-text {
+        opacity: 0;
+        height: 116px;
+        margin: 8px 0 24px;
+      }
+
+      .services__item-more {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &:before {
+        content: "";
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+        pointer-events: none;
+        transition: $transition-hover;
+      }
+
+
+      @include min-desktop {
+
+        &:hover {
+          border-color: $gray-0;
+
+          .services__item-title {
+            color: $primary-500;
+          }
+
+          &:before {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .services__item-img {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .services__item-text {
+            color: $gray-900;
+            opacity: 1;
+            pointer-events: auto;
+          }
+
+          .services__item-more {
+            opacity: 1;
+            pointer-events: auto;
+            cursor: pointer;
+          }
+        }
+      }
+
+      @include max-tablet {
+        &.fliped {
+          border-color: $gray-0;
+
+          .services__item-title {
+            color: $primary-500;
+          }
+
+          &:before {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .services__item-img {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .services__item-text {
+            color: $gray-900;
+            opacity: 1;
+            pointer-events: auto;
+          }
+
+          .services__item-more {
+            opacity: 1;
+            pointer-events: auto;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+  }
+}
